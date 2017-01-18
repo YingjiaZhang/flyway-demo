@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.flywaydb.flyway'
+
+
+repositories {
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.flywaydb:flyway-gradle-plugin:3.2.1'
+    }
+}
+
+dependencies {
+    compile 'mysql:mysql-connector-java:6.0.5'
+    testCompile 'org.flywaydb:flyway-core:3.2.1'
+}
