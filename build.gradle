@@ -20,3 +20,7 @@ dependencies {
     compile 'mysql:mysql-connector-java:6.0.5'
     testCompile 'org.flywaydb:flyway-core:3.2.1'
 }
+
+flyway {
+    locations = ['filesystem:src/main/resources/db/migration','filesystem:src/test/resources/db/migration']
+}
